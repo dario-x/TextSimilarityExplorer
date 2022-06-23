@@ -214,12 +214,16 @@ server <- function(input, output, session) {
     }
     
     #show original student answer when hovering over a text
-    nodes_in_graph$title = lapply(question_data$orginal_student_answer, str_wrap, width=15)
+    nodes_in_graph$title = lapply(question_data$orginal_student_answer, str_wrap, width=10)
     
     visNetwork(nodes_in_graph, edges, width = "100%") %>% 
                     visLegend() %>% 
                     #adds navigation tools
-                    visInteraction(navigationButtons  = TRUE) %>% 
+                    #and style the hover text to get line breaks and a nice looking text
+                    visInteraction(navigationButtons  = TRUE,
+                    tooltipStyle = 'position: fixed;visibility:hidden;padding: 5px;
+                    font-size:15px;font-color:#000000;background-color: #c5dbe6;
+                    max-width:300px;word-break: normal') %>% 
                     visOptions(highlightNearest = TRUE) %>%
                     #makes network reproducible - not needed at the moment
                     #visLayout(randomSeed = 123) %>%
