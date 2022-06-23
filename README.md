@@ -1,2 +1,5 @@
-# TextSimilarityExplorer
-A visualization app that explores whith which user can explore the similary between texts
+# TextSimilarityExplorer 🔎 📄
+
+A visualization app with which users can explore the similary between texts/documents.
+The original app was developed for the area of short term answer grading but the code cuould also be
+applied with some slight adaptions in outher domains.
