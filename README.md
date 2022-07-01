@@ -61,5 +61,7 @@ The files in this repository are reponsible for the following tasks
 3.  **hoster.R** - deploys the main app to the web. A shiny user account
     is requested - and a token must be generated before in order to be
     able do the hosting.
+    
+![pipelne](https://user-images.githubusercontent.com/75636666/176884052-88c4e44c-89be-461d-ac4c-ec6b80ced12f.JPG)
 
 
