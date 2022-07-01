@@ -51,7 +51,7 @@ The files in this repository are reponsible for the following tasks
     the singular, with verbs and other words the root form is found
     (e.g. was becomes is), the stopword removal - this takes place in
     several steps, on the one hand generic stop-words like (also, is, a)
-    - are removed and on the other hand those words are removed - which
+    are removed and on the other hand those words are removed - which
     occur in the question. After this is done, a principal component
     analysis is performed and the data is saved in a new document.
 
