@@ -1,24 +1,24 @@
 # TextSimilarityExplorer 🔎 📄
 
-A visualization app with which users can explore the similary between texts/documents.
+A visualization app with which users can explore the similarity between texts/documents.
 
-The original app was originally developed for the area of short term answer grading but the code cuould also be
+The original app was originally developed for the area of short-term answer grading but the code could also be
 applied with some slight adaptions in other domains.
 
-The web-app can be accessed by clicking on the link below:
+The web app can be accessed by clicking on the link below:
 
 https://dario-x.shinyapps.io/text_visuals/
 
 # Controls 🎛️🕹️
 
-The following controls are available in the app for interactio with the visuls
+The following controls are available in the app for interaction with the visuals
 
-1.  **changing the plot type** this will switch the change the
+1.  **changing the plot type** will switch the change the
     network-based visuals to the PCA-ones or visa versa. The control is
     located above the visualization.
 
-2.  **changing the question** this allows the user to easily select the
-    question which he would like to analyse
+2.  **changing the question** This allows the user to easily select the
+    The question which he would like to analyze
 
 3.  **choose the top n words** this defines how many of the most
     frequent words for each component in the graph are displayed
@@ -28,17 +28,17 @@ The following controls are available in the app for interactio with the visuls
     will be drawn.
 
 5.  **Define the marker size for the PCA plot** - to avoid problems with
-    scalablity
+    scalability
 
 6.  **Set a position jitter of the PCA plot** - to avoid problems of
     overlapping points
     
-Besides those you have the standard zooming, hovering, taking-a-picture tools by plotly
+Besides those you have the standard zooming, hovering, and taking-a-picture tools by plotly
 
 
 # Structure of the Remaining Code 🤖 💾
 
-The files in this repository are reponsible for the following tasks
+The files in this repository are responsible for the following tasks
 
 1.  **Preporcessing_and_Experimentation.ipynb**
 
@@ -50,18 +50,18 @@ The files in this repository are reponsible for the following tasks
     as well as the normalization of the texts (norms are moved here into
     the singular, with verbs and other words the root form is found
     (e.g. was becomes is), the stopword removal - this takes place in
-    several steps, on the one hand generic stop-words like (also, is, a)
-    are removed and on the other hand those words are removed - which
+    several steps, on the one hand, generic stop-words like (also, is, a)
+    are removed and on the other hand, those words are removed - which
     occur in the question. After this is done, a principal component
-    analysis is performed and the data is saved in a new document.
+    the analysis is performed and the data is saved in a new document.
 
-2.  **app.R** this allows the user to easily select the question which
-    he would like to analyse
+2.  **app.R** This allows the user to easily select the question which
+    he would like to analyze
 
 3.  **hoster.R** - deploys the main app to the web. A shiny user account
-    is requested - and a token must be generated before in order to be
-    able do the hosting.
-    
+    is requested - and a token must be generated before to be
+    able to do the hosting.
+
 ![pipelne](https://user-images.githubusercontent.com/75636666/176884052-88c4e44c-89be-461d-ac4c-ec6b80ced12f.JPG)
 
 
