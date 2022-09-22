@@ -7,7 +7,7 @@ applied with some slight adaptions in other domains.
 
 The web app can be accessed by clicking on the link below:
 
-https://dario-x.shinyapps.io/text_visuals/
+https://dario-x.shinyapps.io/TextSimilarityExplorer/
 
 # Controls 🎛️🕹️
 
