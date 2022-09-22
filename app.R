@@ -42,7 +42,7 @@ ui <- bootstrapPage(
   
   
     
-  absolutePanel(top = 60, right = 20, draggable = TRUE, width = "350pt",
+  absolutePanel(top = 60, right = 20, draggable = TRUE, width = "250pt",
     #Dropdown for choosing question
     selectInput("question", "Choose a question you are interested in",
                 choices = unique(data$question), width ="800px"),
@@ -55,7 +55,8 @@ ui <- bootstrapPage(
     br(),
     
     sidebarLayout(
-    sidebarPanel(width = 250,
+    sidebarPanel(width = 50,
+                 
     p("For Network Visualization:"),
     #slider for top words
     sliderInput('top_n_words', '
@@ -64,15 +65,15 @@ ui <- bootstrapPage(
     
     #slider for top words
     sliderInput('similarity_threshold', '
-                Defining initial similarity threshold',
+                Similarity threshold
+                (if low -> more edges)',
                 value=0.13, min=0.01,max= 1, step = 0.01, sep = ""),
-    p("The lower this threshold - the more edges the graph will have"),
     
     #checkboxInput("stopwords_remove", "Remove additional Stop Words?", value = FALSE),
 
     ),
     
-    sidebarPanel(width = 250,
+    sidebarPanel(width = 50,
       
       p("For PCA Plot:"),
       #slider for marker size
@@ -90,9 +91,9 @@ ui <- bootstrapPage(
   
   tabsetPanel(
     #graph output
-    tabPanel("Network Visualization", visNetworkOutput("network", width = "750pt", height = "550pt")),
+    tabPanel("Network Visualization", visNetworkOutput("network", width = "600pt", height = "400pt")),
     #PCA Plot
-    tabPanel("PCA Plot", plotlyOutput("PCA_plot", width = "700pt", height = "550pt")),
+    tabPanel("PCA Plot", plotlyOutput("PCA_plot", width = "600pt", height = "400pt")),
   )
 
   
@@ -231,6 +232,7 @@ server <- function(input, output, session) {
     #show original student answer when hovering over a text
     nodes_in_graph$title = lapply(question_data$orginal_student_answer, str_wrap, width=10)
     
+    
     visNetwork(nodes_in_graph, edges, width = "100%") %>% 
                     visLegend() %>% 
                     #adds navigation tools
@@ -242,8 +244,18 @@ server <- function(input, output, session) {
                     visOptions(highlightNearest = TRUE) %>%
                     #makes network reproducible - not needed at the moment
                     #visLayout(randomSeed = 123) %>%
-                    #stops the network from moving around too much
-                    visPhysics(maxVelocity = 6, forceAtlas2Based = c(centralGravity = 0.9))
+                    #sets the pyhstics
+                    visPhysics(
+                      #control how fast vertices move
+                      maxVelocity = 0.58, 
+                      #stabilization function is turned off 
+                      #since not needed and it takes to much computional resource
+                      stabilization = FALSE, 
+                      forceAtlas2Based = c(
+                        #control how much components are drawn to the middle
+                        centralGravity = 2, 
+                        #controls how fast edges move
+                        springConstant =0.001))
 
   })
   
