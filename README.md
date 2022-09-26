@@ -2,6 +2,8 @@
 
 A visualization app with which users can explore the similarity between texts/documents.
 
+![Beispiel](https://user-images.githubusercontent.com/75636666/192326462-79d449d4-a0d9-4975-a469-f45be85efd24.JPG)
+
 The original app was originally developed for the area of short-term answer grading but the code could also be
 applied with some slight adaptions in other domains.
 
