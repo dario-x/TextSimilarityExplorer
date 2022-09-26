@@ -1,6 +1,6 @@
-<img height="200"/>
-![Beispiel](https://user-images.githubusercontent.com/75636666/192326462-79d449d4-a0d9-4975-a469-f45be85efd24.JPG)
-<\img>
+
+![Beispiel](https://user-images.githubusercontent.com/75636666/192326462-79d449d4-a0d9-4975-a469-f45be85efd24.JPG =100x20)
+
 
 
 # TextSimilarityExplorer 🔎 📄
