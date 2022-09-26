@@ -1,4 +1,5 @@
-![Beispiel](https://user-images.githubusercontent.com/75636666/192328047-f58b2da0-09d5-4f57-bbec-212aedfd96b4.JPG)
+![Beispiel2](https://user-images.githubusercontent.com/75636666/192329941-0c1f5831-70f9-46b3-8123-4ae51a082f95.JPG)
+
 
 # TextSimilarityExplorer 🔎 📄
 
