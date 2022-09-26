@@ -39,7 +39,7 @@ The following controls are available in the app for interaction with the visuals
 Besides those you have the standard zooming, hovering, and taking-a-picture tools by plotly
 
 
-# Structure of the Remaining Code 🤖 💾
+# Structure of the Code 🤖 💾
 
 The files in this repository are responsible for the following tasks
 
