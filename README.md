@@ -3,7 +3,8 @@
 
 # TextSimilarityExplorer 🔎 📄
 
-A visualization app with which users can explore the similarity between texts/documents.
+TextSimilarityExplorer is a tool that anaylzes texts and visualizes them based on their similarity as network or scatter plot.
+Every text is represented as a point in the visualization and similarity is either expressed by the edges (network visualization) or by their closeness (PCA).
 
 The original app was originally developed for the area of short-term answer grading but the code could also be
 applied with some slight adaptions in other domains.
